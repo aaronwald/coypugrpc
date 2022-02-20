@@ -18,8 +18,6 @@ RUN apt-get update && apt-get install -y htop \
 
 # Copy the source code to /v/source and compile it.
 FROM devtools AS grpc
-ARG ssh_prv_key
-ARG ssh_pub_key
 
 WORKDIR /v/libs
 RUN git clone -b v1.43.0 https://github.com/grpc/grpc
